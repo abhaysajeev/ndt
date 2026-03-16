@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "creation": "2026-03-14 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "engine": "InnoDB",
+ "field_order": [
+  "allowed_doctypes_section",
+  "allowed_doctypes",
+  "allowed_routes_section",
+  "allowed_routes"
+ ],
+ "fields": [
+  {
+   "fieldname": "allowed_doctypes_section",
+   "fieldtype": "Section Break",
+   "label": "Allowed Doctypes"
+  },
+  {
+   "fieldname": "allowed_doctypes",
+   "fieldtype": "Table",
+   "label": "Allowed Doctypes",
+   "options": "Res Allowed Doctype"
+  },
+  {
+   "fieldname": "allowed_routes_section",
+   "fieldtype": "Section Break",
+   "label": "Extra Allowed Routes"
+  },
+  {
+   "fieldname": "allowed_routes",
+   "fieldtype": "Table",
+   "label": "Extra Allowed Routes",
+   "options": "Res Allowed Route",
+   "description": "Optional. Additional URL path prefixes beyond those auto-derived from doctypes."
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-03-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NDT",
+ "name": "Res Access Config",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 0
+}

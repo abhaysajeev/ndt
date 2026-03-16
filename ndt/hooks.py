@@ -26,7 +26,19 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/ndt/css/ndt.css"
-# app_include_js = "/assets/ndt/js/ndt.js"
+app_include_js = "/assets/ndt/js/res_ui.js"
+
+# Fixtures
+# --------
+# Records that are automatically synced to the database on bench migrate.
+# Custom DocPerm: gives 'res' role read access to Website Settings
+# so the desk splash image renders correctly for res users.
+fixtures = [
+    {
+        "dt": "Custom DocPerm",
+        "filters": [["parent", "=", "Website Settings"], ["role", "=", "res"]]
+    }
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/ndt/css/ndt.css"
@@ -196,8 +208,9 @@ app_license = "mit"
 
 # Request Events
 # ----------------
-# before_request = ["ndt.utils.before_request"]
-# after_request = ["ndt.utils.after_request"]
+before_request = ["ndt.gate.before_request"]
+boot_session = ["ndt.gate.boot_session"]
+after_request = ["ndt.gate.after_request"]
 
 # Job Events
 # ----------

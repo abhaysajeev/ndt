@@ -1,0 +1,24 @@
+[
+    {
+        "name": "res-website-settings-read",
+        "doctype": "Custom DocPerm",
+        "parent": "Website Settings",
+        "parenttype": "DocType",
+        "parentfield": "permissions",
+        "role": "res",
+        "permlevel": 0,
+        "read": 1,
+        "write": 0,
+        "create": 0,
+        "delete": 0,
+        "submit": 0,
+        "cancel": 0,
+        "amend": 0,
+        "print": 0,
+        "email": 0,
+        "report": 0,
+        "import": 0,
+        "export": 0,
+        "share": 0
+    }
+]
