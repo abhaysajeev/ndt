@@ -1,0 +1,89 @@
+[
+ {
+  "allowed_doctypes": [
+   {
+    "doctype_name": "Branch Master",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   },
+   {
+    "doctype_name": "Client Master",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   },
+   {
+    "doctype_name": "Equipment Master",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   },
+   {
+    "doctype_name": "Material Master",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   },
+   {
+    "doctype_name": "Project Master",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   },
+   {
+    "doctype_name": "Work Order",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   },
+   {
+    "doctype_name": "MT Inspection",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   },
+   {
+    "doctype_name": "MT Inspection Result",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   },
+   {
+    "doctype_name": "ToDo",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   },
+   {
+    "doctype_name": "Note",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   },
+   {
+    "doctype_name": "File",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   },
+   {
+    "doctype_name": "Comment",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   },
+   {
+    "doctype_name": "Custom HTML Block",
+    "parent": "Res Access Config",
+    "parentfield": "allowed_doctypes",
+    "parenttype": "Res Access Config"
+   }
+  ],
+  "allowed_routes": [],
+  "docstatus": 0,
+  "doctype": "Res Access Config",
+  "modified": "2026-03-15 18:39:39.861619",
+  "name": "Res Access Config"
+ }
+]

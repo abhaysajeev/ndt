@@ -34,10 +34,12 @@ app_include_js = "/assets/ndt/js/res_ui.js"
 # Custom DocPerm: gives 'res' role read access to Website Settings
 # so the desk splash image renders correctly for res users.
 fixtures = [
-    {
-        "dt": "Custom DocPerm",
-        "filters": [["parent", "=", "Website Settings"], ["role", "=", "res"]]
-    }
+    # The 'res' role — gate.py checks for this role on every request
+    {"dt": "Role", "filters": [["role_name", "=", "res"]]},
+    # res role read access to Website Settings (splash screen renders correctly)
+    {"dt": "Custom DocPerm", "filters": [["parent", "=", "Website Settings"], ["role", "=", "res"]]},
+    # Whitelist of doctypes and routes accessible to res role users
+    {"dt": "Res Access Config"},
 ]
 
 # include js, css files in header of web template

@@ -1,24 +1,26 @@
 [
-    {
-        "name": "res-website-settings-read",
-        "doctype": "Custom DocPerm",
-        "parent": "Website Settings",
-        "parenttype": "DocType",
-        "parentfield": "permissions",
-        "role": "res",
-        "permlevel": 0,
-        "read": 1,
-        "write": 0,
-        "create": 0,
-        "delete": 0,
-        "submit": 0,
-        "cancel": 0,
-        "amend": 0,
-        "print": 0,
-        "email": 0,
-        "report": 0,
-        "import": 0,
-        "export": 0,
-        "share": 0
-    }
+ {
+  "amend": 0,
+  "cancel": 0,
+  "create": 0,
+  "delete": 0,
+  "docstatus": 0,
+  "doctype": "Custom DocPerm",
+  "email": 0,
+  "export": 0,
+  "if_owner": 0,
+  "import": 0,
+  "modified": "2026-03-15 18:39:38.884425",
+  "name": "res-website-settings-read",
+  "parent": "Website Settings",
+  "permlevel": 0,
+  "print": 0,
+  "read": 1,
+  "report": 0,
+  "role": "res",
+  "select": 0,
+  "share": 0,
+  "submit": 0,
+  "write": 0
+ }
 ]
