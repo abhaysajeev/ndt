@@ -66,6 +66,9 @@ ALWAYS_ALLOWED_PREFIXES = [
 	# Number Card API - needed for workspace cards to load data
 	"/api/method/frappe.desk.doctype.number_card.number_card.",
 
+	# MT Inspection report PDF download
+	"/api/method/alhoty.report_api.download_mt_report",
+
 	# File management
 	"/api/method/frappe.utils.file_manager.",
 	"/api/method/frappe.core.api.file.",
