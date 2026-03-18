@@ -69,10 +69,16 @@ ALWAYS_ALLOWED_PREFIXES = [
 	# MT Inspection report PDF download
 	"/api/method/alhoty.report_api.download_mt_report",
 
+	# NDT Analytics Dashboard API
+	"/api/method/alhoty.al_hoty.dashboard_api.",
+
 	# File management
 	"/api/method/frappe.utils.file_manager.",
 	"/api/method/frappe.core.api.file.",
 	"/api/method/upload_file",
+	# Google Drive file picker settings — called on every attach button click,
+	# returns {} when Drive is disabled (no data leak), must not be blocked
+	"/api/method/frappe.integrations.doctype.google_settings.google_settings.get_file_picker_settings",
 	
 	# Search
 	"/api/method/frappe.utils.global_search.",  # Ctrl+K awesome bar search
@@ -439,10 +445,11 @@ def boot_session(bootinfo):
 		#    We keep only "NDT Portal" for res users, fallback to "Welcome Workspace"
 		if "allowed_workspaces" in bootinfo:
 			all_ws = bootinfo.get("allowed_workspaces") or []
-			# Look for NDT Portal first
-			ndt_portal = [ws for ws in all_ws if ws.get("name") == "NDT Portal"]
-			if ndt_portal:
-				bootinfo["allowed_workspaces"] = ndt_portal
+			# Keep NDT Portal and NDT Analytics for res users
+			RES_WORKSPACES = {"NDT Portal", "NDT Analytics"}
+			ndt_ws = [ws for ws in all_ws if ws.get("name") in RES_WORKSPACES]
+			if ndt_ws:
+				bootinfo["allowed_workspaces"] = ndt_ws
 			else:
 				# Fallback: keep Welcome Workspace
 				fallback = [ws for ws in all_ws if ws.get("name") == "Welcome Workspace"]
@@ -473,6 +480,10 @@ def boot_session(bootinfo):
 				dl for dl in bootinfo["doctype_layouts"]
 				if dl.get("document_type") in allowed_doctypes_with_infra
 			]
+
+		# 8. Set NDT Analytics as default workspace for res users (logo click + initial page)
+		user_boot = bootinfo.get("user") or frappe._dict()
+		user_boot["default_workspace"] = {"name": "NDT Analytics", "title": "NDT Analytics", "public": 1}
 
 	except Exception:
 		# Fail open — log the error but never crash the login flow
